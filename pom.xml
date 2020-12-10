@@ -6,7 +6,7 @@
     <modules>
         <module>common</module>
     </modules>
-    <groupId>com.github.guangee.parent</groupId>
+    <groupId>com.github.guangee</groupId>
     <artifactId>parent</artifactId>
     <version>1.0</version>
     <name>parent</name>
@@ -22,7 +22,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.guangee.parent</groupId>
+            <groupId>com.github.guangee</groupId>
             <artifactId>common</artifactId>
         </dependency>
     </dependencies>
@@ -38,7 +38,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.github.guangee.parent</groupId>
+                <groupId>com.github.guangee</groupId>
                 <artifactId>common</artifactId>
                 <version>${project.version}</version>
             </dependency>
