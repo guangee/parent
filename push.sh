@@ -1,4 +1,4 @@
 git add .
 git commit -m "ok"
-git tag 1.9
+git tag 2.0
 git push origin --tags
