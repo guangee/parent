@@ -6,9 +6,9 @@
     <modules>
         <module>common</module>
     </modules>
-    <groupId>com.coding</groupId>
+    <groupId>com.github.guangee</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0</version>
+    <version>1.5</version>
     <name>parent</name>
     <description>Demo project for Spring Boot</description>
 
@@ -22,7 +22,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.coding</groupId>
+            <groupId>com.github.guangee</groupId>
             <artifactId>common</artifactId>
         </dependency>
     </dependencies>
@@ -38,9 +38,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.coding</groupId>
+                <groupId>com.github.guangee</groupId>
                 <artifactId>common</artifactId>
-                <version>1.0</version>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
