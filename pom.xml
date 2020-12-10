@@ -6,7 +6,7 @@
     <modules>
         <module>common</module>
     </modules>
-    <groupId>com.github.guangee</groupId>
+    <groupId>com.github.guangee.parent</groupId>
     <artifactId>parent</artifactId>
     <version>1.0</version>
     <name>parent</name>
@@ -34,7 +34,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.github.guangee</groupId>
+                <groupId>com.github.guangee.parent</groupId>
                 <artifactId>common</artifactId>
                 <version>${project.version}</version>
             </dependency>
