@@ -21,10 +21,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.github.guangee</groupId>
-            <artifactId>common</artifactId>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
