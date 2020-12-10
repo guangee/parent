@@ -1,0 +1,9 @@
+server:
+  port: 0
+guanweiming:
+  s3:
+    enabled: true
+    access-key: 1
+    bucket: 1
+    secret-key: 1
+    url: 1

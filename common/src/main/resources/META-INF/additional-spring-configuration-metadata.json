@@ -1,0 +1,58 @@
+{
+  "properties": [
+    {
+      "name": "guanweiming.cors.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否允许跨域跨域.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.qiniu.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置七牛云.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.s3.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置亚马逊S3.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.aliyun.sms.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置阿里云短信接口.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.wx.miniapp.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置微信小程序.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.aliyun.ocr.car.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置阿里云ocr识别车牌号.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.gaode.map.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启高德地图组件.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.tencent.im.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置腾讯云IM组件.",
+      "default": false
+    },
+    {
+      "name": "guanweiming.tencent.map.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否配置腾讯云地图组件.",
+      "default": false
+    }
+  ]
+}
