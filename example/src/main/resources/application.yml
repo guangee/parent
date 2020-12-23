@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 10880
 guanweiming:
   s3:
     enabled: true

@@ -3,7 +3,6 @@ package com.coding;
 import com.amazonaws.services.s3.AmazonS3;
 import com.coding.service.PowerService;
 import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitScan;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -11,10 +10,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 @RetrofitScan("com.coding")
-@EnableSwagger2
+@EnableSwagger2WebMvc
 @RestController
 @SpringBootApplication
 public class App implements CommandLineRunner {
