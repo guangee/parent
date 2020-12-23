@@ -1,9 +1,11 @@
 package com.coding;
 
 import com.amazonaws.services.s3.AmazonS3;
+import com.coding.grpc.message.MessageServiceGrpc;
 import com.coding.service.PowerService;
 import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitScan;
 import io.swagger.annotations.ApiModelProperty;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
