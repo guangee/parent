@@ -6,6 +6,7 @@
     <modules>
         <module>common</module>
         <module>example</module>
+        <module>proxy</module>
     </modules>
     <groupId>com.github.guangee.parent</groupId>
     <artifactId>parent</artifactId>
@@ -62,6 +63,11 @@
             <dependency>
                 <groupId>com.github.guangee.parent</groupId>
                 <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.guangee.parent</groupId>
+                <artifactId>proxy</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

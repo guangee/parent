@@ -7,3 +7,8 @@ guanweiming:
     bucket: 1
     secret-key: 1
     url: 1
+proxy:
+  client-key: 6a500c3294fe4dd7b18440b65fada93d
+  server-port: 4900
+  server-host: coding-space.cn
+  ssl-enable: false
