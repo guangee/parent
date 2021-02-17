@@ -7,6 +7,7 @@
         <module>common</module>
         <module>example</module>
         <module>proxy</module>
+        <module>grpc</module>
     </modules>
     <groupId>com.github.guangee.parent</groupId>
     <artifactId>parent</artifactId>

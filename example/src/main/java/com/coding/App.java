@@ -2,7 +2,7 @@ package com.coding;
 
 import com.coding.common.Container;
 import com.coding.common.ContainerHelper;
-import com.coding.cors.ProxyProperties;
+import com.coding.proxy.ProxyProperties;
 import com.coding.service.PowerService;
 import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitScan;
 import lombok.RequiredArgsConstructor;

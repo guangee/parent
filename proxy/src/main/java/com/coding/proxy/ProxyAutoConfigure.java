@@ -1,4 +1,4 @@
-package com.coding.cors;
+package com.coding.proxy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

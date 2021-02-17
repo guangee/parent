@@ -1,4 +1,4 @@
-package com.coding.cors;
+package com.coding.proxy;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

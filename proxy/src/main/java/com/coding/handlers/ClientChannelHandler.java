@@ -1,7 +1,7 @@
 package com.coding.handlers;
 
 import com.coding.ClientChannelMannager;
-import com.coding.cors.ProxyProperties;
+import com.coding.proxy.ProxyProperties;
 import com.coding.listener.ChannelStatusListener;
 import com.coding.listener.ProxyChannelBorrowListener;
 import com.coding.proto.Constants;

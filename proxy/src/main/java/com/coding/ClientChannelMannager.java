@@ -1,6 +1,6 @@
 package com.coding;
 
-import com.coding.cors.ProxyProperties;
+import com.coding.proxy.ProxyProperties;
 import com.coding.listener.ProxyChannelBorrowListener;
 import com.coding.proto.Constants;
 import io.netty.bootstrap.Bootstrap;
