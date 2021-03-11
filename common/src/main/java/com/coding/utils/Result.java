@@ -14,6 +14,10 @@ public class Result<T> implements Serializable {
     private int status;
     private T data;
 
+    public Result(){
+
+    }
+
     private Result(int status) {
         this.status = status;
     }
