@@ -42,13 +42,12 @@ public class S3ServiceAutoConfigure {
         clientConfiguration.setSignerOverride("AWSS3V4SignerType");
         log.debug("注册S3");
 
-        AmazonS3 s3Client = AmazonS3ClientBuilder
+        return AmazonS3ClientBuilder
                 .standard()
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(s3Properties.getUrl(), Regions.US_EAST_1.name()))
                 .withPathStyleAccessEnabled(true)
                 .withClientConfiguration(clientConfiguration)
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
-        return s3Client;
     }
 }
