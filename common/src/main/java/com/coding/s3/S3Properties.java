@@ -23,7 +23,11 @@ public class S3Properties {
      */
     private String bucket;
     /**
-     * 基础访问地址
+     * 文件上传地址
      */
     private String url;
+    /**
+     * 文件访问地址
+     */
+    private String accessUrl;
 }
