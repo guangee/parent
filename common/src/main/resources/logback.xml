@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+    <springProperty scope="context" name="env" source="spring.profiles.active" defaultValue="dev"/>
+    <!-- 读取application.yml中的属性 -->
+    <springProperty scope="context" name="project" source="spring.application.name"/>
+
+    <springProperty name="serviceName" source="spring.application.name"/>
+
+    <!--    <springProperty scope="context" name="LOG_PATTERN" source="logging.customer.pattern"/>-->
+
+    <!-- 彩色日志 -->
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+    <!-- 彩色日志格式 -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <!-- Console 输出设置 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>debug</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>NEUTRAL</onMismatch>
+        </filter>
+    </appender>
+
+    <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
+    <!-- 输出到mq -->
+    <appender name="AMQP" class="com.coding.common.AmqpLogbackAppender">
+        <!-- layout is required but ignored as using the encoder for the AMQP message body -->
+        <layout>
+            <pattern><![CDATA[ %level ]]></pattern>
+        </layout>
+
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"serviceName": "${serviceName}"}</customFields>
+        </encoder>
+
+        <host>redis.coding-space.cn</host>
+        <port>5672</port>
+        <username>admin</username>
+        <password>19941108Aa</password>
+        <exchangeName>elk_exchange</exchangeName>
+        <routingKeyPattern>elk_key</routingKeyPattern>
+
+        <applicationId>spring-cloud-system</applicationId>
+
+        <virtualHost>/</virtualHost>
+        <declareExchange>true</declareExchange>
+        <exchangeType>direct</exchangeType>
+        <generateId>true</generateId>
+        <charset>UTF-8</charset>
+        <durable>true</durable>
+        <deliveryMode>PERSISTENT</deliveryMode>
+    </appender>
+
+    <!-- 日志输出级别 这样设置不打印日志 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="AMQP"/>
+    </root>
+</configuration>
