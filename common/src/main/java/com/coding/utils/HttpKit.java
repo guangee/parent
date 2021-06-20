@@ -1,8 +1,10 @@
 package com.coding.utils;
 
+import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -10,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Enumeration;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -24,8 +28,9 @@ public class HttpKit {
      * @return HttpServletRequest
      */
     public static HttpServletRequest getRequest() {
-        return ((ServletRequestAttributes) RequestContextHolder
-                .currentRequestAttributes()).getRequest();
+        RequestAttributes requestAttributes = RequestContextHolder
+                .currentRequestAttributes();
+        return ((ServletRequestAttributes) requestAttributes).getRequest();
     }
 
     /**
@@ -108,4 +113,14 @@ public class HttpKit {
     }
 
 
+    public static Map<String, String> getRequestHeader() {
+        HttpServletRequest request = getRequest();
+        Enumeration<String> headerNames = request.getHeaderNames();
+        Map<String, String> headerMap = Maps.newHashMap();
+        while (headerNames.hasMoreElements()) {
+            String key = headerNames.nextElement();
+            headerMap.put(key, request.getHeader(key));
+        }
+        return headerMap;
+    }
 }

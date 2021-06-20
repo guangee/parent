@@ -53,6 +53,12 @@
       "type": "java.lang.Boolean",
       "description": "是否配置腾讯云地图组件.",
       "default": false
+    },
+    {
+      "name": "guanweiming.weblog.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启请求日志记录.",
+      "default": false
     }
   ]
 }

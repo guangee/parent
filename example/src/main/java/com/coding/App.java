@@ -21,8 +21,8 @@ import java.util.Arrays;
 @SpringBootApplication
 public class App implements CommandLineRunner {
 
-    private final PowerService powerService;
-    private final ProxyProperties proxyProperties;
+//    private final PowerService powerService;
+//    private final ProxyProperties proxyProperties;
 
 
     public static void main(String[] args) {
@@ -31,10 +31,11 @@ public class App implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        System.out.println("start");
-        Object list = powerService.getList();
-        System.out.println(list);
-        ContainerHelper.start(Arrays.asList(new Container[]{new ProxyClientContainer(proxyProperties)}));
-        System.out.println("proxy start");
+//        System.out.println("start");
+//        Object list = powerService.getList();
+//        System.out.println(list);
+//        ContainerHelper.start(Arrays.asList(new Container[]{new ProxyClientContainer(proxyProperties)}));
+//        System.out.println("proxy start");
+
     }
 }
