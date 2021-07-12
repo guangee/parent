@@ -1,5 +1,5 @@
 server:
-  port: 10880
+  port: 8888
 guanweiming:
   s3:
     enabled: true
@@ -10,9 +10,9 @@ guanweiming:
   weblog:
     enabled: true
 proxy:
-  client-key: 6a500c3294fe4dd7b18440b65fada93d
+  client-key: 779d65c71c6d42318a6bdae0d7d20f55
   server-port: 4900
-  server-host: coding-space.cn
+  server-host: redis.coding-space.cn
   ssl-enable: false
 grpc:
   server:
