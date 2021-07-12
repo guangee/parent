@@ -1,7 +1,7 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.coding.qiniu.QiniuServiceAutoConfigure,\
   com.coding.s3.S3ServiceAutoConfigure,\
-  com.coding.proxy.CorsFilterAutoConfigure,\
+  com.coding.cors.CorsFilterAutoConfigure,\
   com.coding.aliyun.sms.AliYunSmsServiceAutoConfigure,\
   com.coding.miniapp.MiniAppServiceAutoConfigure,\
   com.coding.aliyun.carno.AliYunCarNoServiceAutoConfigure,\

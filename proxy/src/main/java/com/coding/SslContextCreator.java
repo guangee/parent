@@ -1,6 +1,6 @@
 package com.coding;
 
-import com.coding.proxy.ProxyProperties;
+import com.coding.cors.ProxyProperties;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.net.ssl.SSLContext;

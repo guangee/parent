@@ -18,7 +18,7 @@ public class WebLogAutoConfigure {
 
     @Bean
     @ConditionalOnMissingBean
-    public WebLog corsFilter() {
+    public WebLog webLog() {
         log.info("配置日志拦截器");
         return new WebLog();
     }

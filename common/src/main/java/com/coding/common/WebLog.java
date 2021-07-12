@@ -34,12 +34,17 @@ public class WebLog {
             throw throwable;
         }
         long times = stopwatch.elapsed(TimeUnit.MILLISECONDS);
-        log.info("request:success: useTime:{}ms,uri:{},request:{},response:{},header:{}", times,
-                HttpKit.getRequest().getRequestURI(),
-                JsonUtil.toJson(joinPoint.getArgs()),
-                JsonUtil.toJson(proceed),
-                JsonUtil.toJson(HttpKit.getRequestHeader())
-        );
+        try {
+            log.info("request:success: useTime:{}ms,uri:{},request:{},response:{},header:{}", times,
+                    HttpKit.getRequest().getRequestURI(),
+                    JsonUtil.toJson(joinPoint.getArgs()),
+                    JsonUtil.toJson(proceed),
+                    JsonUtil.toJson(HttpKit.getRequestHeader())
+            );
+        } catch (Exception ignored) {
+            // 无需打印错误日志
+        }
+
         return proceed;
     }
 }

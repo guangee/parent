@@ -1,9 +1,5 @@
 package com.coding;
 
-import com.coding.common.Container;
-import com.coding.common.ContainerHelper;
-import com.coding.proxy.ProxyProperties;
-import com.coding.service.PowerService;
 import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitScan;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -11,8 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
-
-import java.util.Arrays;
 
 @RequiredArgsConstructor
 @RetrofitScan("com.coding")

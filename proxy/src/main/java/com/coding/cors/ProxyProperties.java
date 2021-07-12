@@ -1,4 +1,4 @@
-package com.coding.proxy;
+package com.coding.cors;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
