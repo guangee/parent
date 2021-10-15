@@ -7,7 +7,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author guanweiming
@@ -20,14 +19,14 @@ public abstract class AbstractRequestLimitContract {
     @Before("within(@org.springframework.web.bind.annotation.RestController *) && @annotation(limit)")
     public void requestLimit(final JoinPoint joinPoint, RequestLimit limit) throws RequestLimitException {
 
-        try {
-            doLimit(HttpKit.getRequest(), joinPoint, limit);
-        } catch (RequestLimitException e) {
-            throw e;
-        } catch (Exception e) {
-            log.error("发生异常: ", e);
-            throw e;
-        }
+//        try {
+//            doLimit(HttpKit.getRequest(), joinPoint, limit);
+//        } catch (RequestLimitException e) {
+//            throw e;
+//        } catch (Exception e) {
+//            log.error("发生异常: ", e);
+//            throw e;
+//        }
     }
 
     /**
@@ -38,5 +37,5 @@ public abstract class AbstractRequestLimitContract {
      * @param limit     limit对象
      * @throws RequestLimitException 超出频率限制
      */
-    protected abstract void doLimit(HttpServletRequest request, JoinPoint joinPoint, RequestLimit limit) throws RequestLimitException;
+//    protected abstract void doLimit(HttpServletRequest request, JoinPoint joinPoint, RequestLimit limit) throws RequestLimitException;
 }

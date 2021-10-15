@@ -10,13 +10,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 
-import java.util.Arrays;
 
 @RequiredArgsConstructor
 @RetrofitScan("com.coding")
-@EnableSwagger2WebMvc
+//@EnableSwagger2WebFlux
 @RestController
 @SpringBootApplication
 public class App implements CommandLineRunner {
@@ -34,7 +33,7 @@ public class App implements CommandLineRunner {
         System.out.println("start");
         Object list = powerService.getList();
         System.out.println(list);
-        ContainerHelper.start(Arrays.asList(new Container[]{new ProxyClientContainer(proxyProperties)}));
+//        ContainerHelper.start(Arrays.asList(new Container[]{new ProxyClientContainer(proxyProperties)}));
         System.out.println("proxy start");
     }
 }

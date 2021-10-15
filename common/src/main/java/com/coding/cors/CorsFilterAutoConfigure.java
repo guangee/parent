@@ -25,10 +25,10 @@ public class CorsFilterAutoConfigure {
     }
 
 
-    @Bean
-    @ConditionalOnMissingBean
-    public CorsFilter corsFilter() {
-        log.debug("配置跨域");
-        return new CorsFilter(corsProperties.getMaxAge(), corsProperties.getAllowOrigin(), corsProperties.getAllowMethods());
-    }
+//    @Bean
+//    @ConditionalOnMissingBean
+//    public CorsFilter corsFilter() {
+//        log.debug("配置跨域");
+//        return new CorsFilter(corsProperties.getMaxAge(), corsProperties.getAllowOrigin(), corsProperties.getAllowMethods());
+//    }
 }

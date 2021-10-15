@@ -10,7 +10,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,13 +23,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public Result<String> handleBanRequest(Exception e) {
-        HttpServletRequest request = HttpKit.getRequest();
-        Enumeration<String> headerNames = request.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String key = headerNames.nextElement();
-            log.info("{}:{}", key, request.getHeader(key));
-        }
-        log.error("系统错误:{}", HttpKit.getRequest().getRequestURI(), e);
+//        HttpServletRequest request = HttpKit.getRequest();
+//        Enumeration<String> headerNames = request.getHeaderNames();
+//        while (headerNames.hasMoreElements()) {
+//            String key = headerNames.nextElement();
+//            log.info("{}:{}", key, request.getHeader(key));
+//        }
+//        log.error("系统错误:{}", HttpKit.getRequest().getRequestURI(), e);
         return Result.createByErrorMessage("系统错误" + e.getMessage());
     }
 

@@ -96,11 +96,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.guangee</groupId>
-                <artifactId>guanweiming-spring-boot-starter</artifactId>
-                <version>${guangee-starter.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>net.devh</groupId>
                 <artifactId>grpc-server-spring-boot-starter</artifactId>
                 <version>${grpc-starter.version}</version>
@@ -135,12 +130,6 @@
                 <scope>compile</scope>
             </dependency>
             <dependency>
-                <groupId>com.spring4all</groupId>
-                <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>1.9.0.RELEASE</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-micro-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
@@ -168,6 +157,7 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.0.1</version>
                 <configuration>
