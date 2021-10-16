@@ -14,6 +14,13 @@ proxy:
   server-port: 4900
   server-host: coding-space.cn
   ssl-enable: false
+<<<<<<< HEAD
 grpc:
   server:
     port: 0
+=======
+springfox:
+  documentation:
+    swagger-ui:
+      base-url: /doc
+>>>>>>> 732c9fc (netty)
