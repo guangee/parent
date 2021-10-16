@@ -8,11 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
-<<<<<<< HEAD
-=======
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
->>>>>>> 732c9fc (netty)
 
 @EnableSwagger2
 @RequiredArgsConstructor

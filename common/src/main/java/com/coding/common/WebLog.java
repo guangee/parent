@@ -30,20 +30,20 @@ public class WebLog {
         try {
             proceed = joinPoint.proceed();
         } catch (Throwable throwable) {
-            log.warn("request:error: uri:{},request:{}", HttpKit.getRequest().getRequestURI(), JsonUtil.toJson(joinPoint.getArgs()), throwable);
+//            log.warn("request:error: uri:{},request:{}", HttpKit.getRequest().getRequestURI(), JsonUtil.toJson(joinPoint.getArgs()), throwable);
             throw throwable;
         }
         long times = stopwatch.elapsed(TimeUnit.MILLISECONDS);
-        try {
-            log.info("request:success: useTime:{}ms,uri:{},request:{},response:{},header:{}", times,
-                    HttpKit.getRequest().getRequestURI(),
-                    JsonUtil.toJson(joinPoint.getArgs()),
-                    JsonUtil.toJson(proceed),
-                    JsonUtil.toJson(HttpKit.getRequestHeader())
-            );
-        } catch (Exception ignored) {
-            // 无需打印错误日志
-        }
+//        try {
+//            log.info("request:success: useTime:{}ms,uri:{},request:{},response:{},header:{}", times,
+//                    HttpKit.getRequest().getRequestURI(),
+//                    JsonUtil.toJson(joinPoint.getArgs()),
+//                    JsonUtil.toJson(proceed),
+//                    JsonUtil.toJson(HttpKit.getRequestHeader())
+//            );
+//        } catch (Exception ignored) {
+//            // 无需打印错误日志
+//        }
 
         return proceed;
     }
