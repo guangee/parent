@@ -18,8 +18,7 @@ import java.util.stream.Collectors;
  * @author guanweiming
  */
 @Slf4j
-@RestControllerAdvice
-public class GlobalExceptionHandler {
+public abstract class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public Result<String> handleBanRequest(Exception e) {
