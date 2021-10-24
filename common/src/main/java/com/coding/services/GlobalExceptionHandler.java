@@ -29,10 +29,9 @@ public class GlobalExceptionHandler {
 //            String key = headerNames.nextElement();
 //            log.info("{}:{}", key, request.getHeader(key));
 //        }
-//        log.error("系统错误:{}", HttpKit.getRequest().getRequestURI(), e);
+        log.error("系统错误:{}", e.getMessage(), e);
         return Result.createByErrorMessage("系统错误" + e.getMessage());
     }
-
 
 
     @ExceptionHandler(RequestLimitException.class)
